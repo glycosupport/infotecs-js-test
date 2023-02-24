@@ -1,0 +1,153 @@
+<html lang="en">
+
+<head>
+    <title>Table</title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <!-- UI - circle-button, button, input, textarea -->
+
+    <!-- managed-table - основной и переиспользуемый компонент  -->
+
+    <div class="managed-table body__managed-table">
+
+        <div class="managed-table__control">
+            <button class="circle-button managed-table__button_add"></button>
+            <button class="circle-button managed-table__button_upload"></button>
+            <button class="circle-button managed-table__button_clear"></button>
+            <button class="circle-button managed-table__button_refresh"></button>
+        </div>
+
+        <!-- table - переиспользуемый компонент  -->
+
+        <table class="table managed-table__table">
+
+            <!-- Table head -->
+
+            <thead class="table__thead">
+                <tr class="table__tr">
+
+                    <th class="table__th">
+                        <div class="table__wrapper_th">
+                            <button class="table__button_hide table__button_hide_first-name"></button>
+                            <div>First Name</div>
+                            <button class="table__button_sort table__button_sort_first-name"></button>
+                        </div>
+                    </th>
+                    <th class="table__th">
+                        <div class="table__wrapper_th">
+                            <button class="table__button_hide table__button_hide_last-name"></button>
+                            <div>Last Name</div>
+                            <button class="table__button_sort table__button_sort_last-name"></button>
+                        </div>
+                    </th>
+                    <th class="table__th">
+                        <div class="table__wrapper_th">
+                            <button class="table__button_hide table__button_hide_about"></button>
+                            <div>About</div>
+                            <button class="table__button_sort table__button_sort_about"></button>
+                        </div>
+                    </th>
+                    <th class="table__th">
+                        <div class="table__wrapper_th">
+                            <button class="table__button_hide table__button_hide_eye-color"></button>
+                            <div>Eye Color</div>
+                            <button class="table__button_sort table__button_sort_eye-color"></button>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+
+            <!-- Table body -->
+
+            <tbody class="table__tbody"></tbody>
+        </table>
+
+        <!-- "No data available" text -->
+
+        <div class="managed-table__no-data">No data available</div>
+
+        <!-- Pagination -->
+
+        <div class="managed-table__pagination">
+            <button class="circle-button managed-table__button_page_left"></button>
+            <div class="managed-table__page-number">1/1</div>
+            <button class="circle-button managed-table__button_page_right"></button>
+        </div>
+
+        <!-- Modal - переиспользуемый компонент  -->
+
+        <div class="modal managed-table__modal none">
+
+            <!-- Modal content -->
+
+            <div class="modal__content">
+
+                <!-- Modal form -->
+
+                <form action="" class="modal__form">
+                    <div class="modal__name"></div>
+
+                    <div class="modal__box">
+                        <input 
+                            class="input modal__input_first-name" 
+                            type="text" 
+                            placeholder="First name"
+                        >
+                        </input>
+                    </div>
+
+                    <div class="modal__box">
+                        <input 
+                            class="input modal__input_last-name" 
+                            type="text" 
+                            placeholder="Last name"
+                        >
+                        </input>
+                    </div>
+
+                    <div class="modal__box">
+                        <textarea 
+                            class="textarea modal__textarea_about" 
+                            type="text" 
+                            placeholder="About"
+                        >
+                        </textarea>
+                    </div>
+
+                    <div class="modal__box">
+                        <input 
+                            class="input modal__input_eye-color" 
+                            type="text" 
+                            placeholder="Eye color"
+                        >
+                        </input>
+                    </div>
+
+                    
+                    <div class="modal__control">
+                        <button 
+                            class="button button_cancel modal__button_cancel" 
+                            type="button"
+                        >
+                            Cancel
+                        </button>
+                        <button 
+                            class="button button_apply modal__button_apply" 
+                            type="button"
+                        >
+                            Apply
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/index.js" type="module"></script>
+
+</body>
